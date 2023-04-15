@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .pill {
+        @apply h-[1.1rem] w-2 bg-white rounded-full;
+    }
+}
