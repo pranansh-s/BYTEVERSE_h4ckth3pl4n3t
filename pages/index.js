@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import Planner from "@/components/Planner";
 
 export default function Home() {
   return (
-    <div className='flex items-center justify-center h-screen'>
-      <h1>HRLLL</h1>
-    </div>   
+    <div className='flex items-center justify-end h-screen'>
+      <Planner/>
+    </div>
   )
 }
