@@ -4,6 +4,25 @@
 
 @layer components {
     .pill {
-        @apply h-[1.1rem] w-2 bg-white rounded-full;
+        @apply h-[1.1rem] w-2 bg-white rounded-full border-t-black/60 border-x-black/60 border-b-transparent border-[0.5px];
+    }
+}
+
+@layer base {
+    @font-face {
+        font-family: "Hind Madurai Light";
+        src: url('../public/fonts/HindMadurai-Light.ttf');
+    }
+    @font-face {
+        font-family: "Hind Madurai Regular";
+        src: url('../public/fonts/HindMadurai-Regular.ttf');
+    }
+    @font-face {
+        font-family: "Montserrat";
+        src: url('../public/fonts/Montserrat.ttf');
+    }
+    @font-face {
+        font-family: "Work Sans";
+        src: url('../public/fonts/WorkSans.ttf');
     }
 }

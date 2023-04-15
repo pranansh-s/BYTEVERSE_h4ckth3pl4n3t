@@ -5,7 +5,14 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: { },
+    extend: { 
+      fontFamily: {
+        hindLight: ['Hind Madurai Light', 'serif'],
+        hindRegular: ['Hind Madurai Regular', 'serif'],
+        montserrat: ['Montserrat', 'serif'],
+        workSans: ['Work Sans', 'serif'],
+      },
+     },
   },
   plugins: [
     require('@tailwindcss/line-clamp'),
