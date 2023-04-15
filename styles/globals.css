@@ -6,6 +6,9 @@
     .pill {
         @apply h-[1.1rem] w-2 bg-white rounded-full border-t-black/60 border-x-black/60 border-b-transparent border-[0.5px];
     }
+    .button {
+        @apply px-4 py-3 text-white text-sm font-montserrat h-max font-bold select-none active:translate-y-1 active:shadow-none active:border-b-[0px] border-b-[1px] transition-all duration-150 rounded-md;
+    }
 }
 
 @layer base {
@@ -20,9 +23,5 @@
     @font-face {
         font-family: "Montserrat";
         src: url('../public/fonts/Montserrat.ttf');
-    }
-    @font-face {
-        font-family: "Work Sans";
-        src: url('../public/fonts/WorkSans.ttf');
     }
 }

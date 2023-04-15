@@ -10,8 +10,10 @@ module.exports = {
         hindLight: ['Hind Madurai Light', 'serif'],
         hindRegular: ['Hind Madurai Regular', 'serif'],
         montserrat: ['Montserrat', 'serif'],
-        workSans: ['Work Sans', 'serif'],
       },
+      colors: {
+        primary: "#c0b7f7",
+      }
      },
   },
   plugins: [
