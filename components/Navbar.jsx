@@ -33,23 +33,23 @@ const Navbar = () => {
         </div>
         <Link href="/" className={`button bg-[#8371f0] my-2 [box-shadow:0_5px_0_0_#3319d1,0_10px_0_0_#3319d122] border-[#8371f0]/80 flex justify-center ${!navClose && 'space-x-3'} items-center`}>
             <h4 className={`${navClose ? 'w-0' : 'w-max'} overflow-hidden`}>Home</h4>
-            <Image src={homeLogo} width={20} height={20} />
+            <Image src={homeLogo} width={20} height={20} alt="" />
         </Link>
         {!navClose && <button onClick={() => setShowGroups(!showGroups)} className="button bg-[#9587f2] my-2 [box-shadow:0_5px_0_0_#8371f0,0_10px_0_0_#3319d122] border-[#9587f2]/80 flex justify-center space-x-3 items-center origin-left transition-all duration-300">
             <h4>Groups</h4>
-            <Image src={dropDownLogo} width={15} height={15} className={`${showGroups ? 'rotate-180' : 'rotate-0'}  transition-all duration-300`}/>
+            <Image src={dropDownLogo} width={15} height={15} alt="" className={`${showGroups ? 'rotate-180' : 'rotate-0'}  transition-all duration-300`}/>
         </button>}
         {!navClose && <button onClick={() => setShowClassrooms(!showClassrooms)} className="button bg-[#9587f2] my-2 [box-shadow:0_5px_0_0_#8371f0,0_10px_0_0_#3319d122] border-[#9587f2]/80 flex justify-center space-x-3 items-center origin-left transition-all duration-300">
             <h4>Classrooms</h4>
-            <Image src={dropDownLogo} width={15} height={15} className={`${showClassrooms ? 'rotate-180' : 'rotate-0'}  transition-all duration-300`}/>
+            <Image src={dropDownLogo} width={15} height={15} alt="" className={`${showClassrooms ? 'rotate-180' : 'rotate-0'}  transition-all duration-300`}/>
         </button>}
         <Link href="pay-with-qr" className={`button bg-[#8371f0] my-2 [box-shadow:0_5px_0_0_#3319d1,0_10px_0_0_#3319d122] border-[#8371f0]/80 flex justify-center ${!navClose && 'space-x-3'} items-center`}>
             <h4 className={`${navClose ? 'w-0' : 'w-max'} overflow-hidden`}>Pay</h4>
-            <Image src={qrLogo} width={20} height={20} />
+            <Image src={qrLogo} width={20} height={20} alt="" />
         </Link>
         <div className={`h-0 w-full outline outline-[#dad5fa] absolute left-0 ${navClose ? 'bottom-36' : 'bottom-20'}`}/>
         <button onClick={() => setNavClose(!navClose)} className={`flex items-center h-12 justify-center border-2 ${navClose ? 'rounded-full' : 'rounded-lg'} w-full mt-auto border-white`}>
-            <Image src={arrowRightLogo} width={25} height={25} className={`${!navClose ? 'rotate-180' : 'rotate-0'} transition-all duration-300`}/>
+            <Image src={arrowRightLogo} width={25} height={25} className={`${!navClose ? 'rotate-180' : 'rotate-0'} transition-all duration-300`} alt=""/>
         </button>
     </div>
   )

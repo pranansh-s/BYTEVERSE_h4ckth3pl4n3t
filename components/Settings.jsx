@@ -21,7 +21,7 @@ const Settings = () => {
         {addTask && 
             <div className="w-screen h-screen bg-white/60 backdrop-blur-md absolute left-0 top-0 z-50 flex items-center justify-center">
                 <div className="w-1/4 h-1/2 rounded-md bg-[#f3f2fd] p-10 flex flex-col items-center justify-between relative">
-                    <Image width={40} height={40} src={xLogo} onClick={() => setAddTask(false)} className="absolute right-6 top-6 cursor-pointer p-2"/>
+                    <Image alt="" width={40} height={40} src={xLogo} onClick={() => setAddTask(false)} className="absolute right-6 top-6 cursor-pointer p-2"/>
                     <div className="flex space-x-3 mt-10">
                         <input className="w-full p-1 rounded-md focus:outline-none" placeholder="Start Time"/>
                         <input className="w-full p-1 rounded-md focus:outline-none" placeholder="End Time"/>
@@ -53,7 +53,7 @@ const Settings = () => {
             </div>
             <button onClick={() => setAddTask(true)} className="button bg-[#8371f0] my-2 [box-shadow:0_5px_0_0_#3319d1,0_10px_0_0_#3319d122] border-[#8371f0]/80 w-full flex justify-center space-x-3 items-center">
                 <h4>Add Task</h4>
-                <Image src={uploadLogo} width={20} height={20} />
+                <Image src={uploadLogo} width={20} height={20} alt="" />
             </button>
         </div>
     </>

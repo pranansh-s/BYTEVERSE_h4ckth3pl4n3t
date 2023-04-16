@@ -16,12 +16,12 @@ const profile = () => {
   return (
     <div className="flex flex-col items-center font-hindRegular">
         <div className="h-[20vh] w-screen bg-[#5248B5] flex items-center justify-center relative">
-            <Image src={pfp} width={200} height={200} className="rounded-full absolute top-1/2 outline-[2rem] outline outline-white"/>
+            <Image alt="" src={pfp} width={200} height={200} className="rounded-full absolute top-1/2 outline-[2rem] outline outline-white"/>
         </div>
         <div className="flex flex-col mt-48 w-[25rem] items-center space-y-8">
             <div className="flex space-x-5 w-full">
                 <div className="bg-white shadow-md p-3 rounded-full">
-                    <Image src={college} width={30} height={30}/>
+                    <Image alt="" src={college} width={30} height={30}/>
                 </div>
                 <div className="flex flex-col w-full">
                     <label className="text-sm text-[#8775f1] font-hindLight">College</label>
@@ -30,7 +30,7 @@ const profile = () => {
             </div>
             <div className="flex space-x-5 w-full">
                 <div className="bg-white shadow-md p-3 rounded-full">
-                    <Image src={mail} width={30} height={30}/>
+                    <Image alt="" src={mail} width={30} height={30}/>
                 </div>
                 <div className="flex flex-col w-full">
                     <label className="text-sm text-[#8775f1] font-hindLight">Email</label>
@@ -39,7 +39,7 @@ const profile = () => {
             </div>
             <div className="flex space-x-5 w-full">
                 <div className="bg-white shadow-md p-3 rounded-full">
-                    <Image src={user} width={30} height={30}/>
+                    <Image alt="" src={user} width={30} height={30}/>
                 </div>
                 <div className="flex flex-col w-full">
                     <label className="text-sm text-[#8775f1] font-hindLight">Username</label>
@@ -48,7 +48,7 @@ const profile = () => {
             </div>
             <div className="flex space-x-5 w-full">
                 <div className="bg-white shadow-md p-3 rounded-full">
-                    <Image src={phone} width={30} height={30}/>
+                    <Image alt="" src={phone} width={30} height={30}/>
                 </div>
                 <div className="flex flex-col w-full">
                     <label className="text-sm text-[#8775f1] font-hindLight">Phone number</label>
