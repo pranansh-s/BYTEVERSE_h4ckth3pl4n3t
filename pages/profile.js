@@ -5,16 +5,17 @@ import user from "../public/profile/user.svg";
 import phone from "../public/profile/phone.svg";
 import college from "../public/profile/college.svg";
 import mail from "../public/profile/mail.svg";
+import arrowLogo from "../public/arrow-right.svg";
 import { signOutHandle } from "./login";
 import { useSelector } from "react-redux";
 import useAuth from "@/utils/useAuth";
 
 const Profile = () => {
   const userData = useSelector((state) => state.user.userData)[0];
-  const userInfo = useAuth();
 
   return (
     <div className="flex flex-col items-center font-hindRegular">
+        <Image src={arrowLogo} width={50} height={50} className="absolute left-10 top-10 z-10 rotate-180 cursor-pointer p-1" onClick={() => window.location.href = '/'}/>
         <div className="h-[20vh] w-screen bg-[#5248B5] flex items-center justify-center relative">
             <Image alt="" src={pfp} width={200} height={200} className="rounded-full absolute top-1/2 outline-[2rem] outline outline-white"/>
         </div>

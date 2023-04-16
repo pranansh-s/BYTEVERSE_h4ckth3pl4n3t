@@ -10,6 +10,7 @@ export const signOutHandle = () => {
   signOut(auth)
   .then(()=>{
     console.log("success")
+    window.location.href = '/login';
   })
   .catch((error)=>{
     console.log(error);
@@ -22,6 +23,7 @@ export const signInHandle = () => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       const user = result.user;
+      window.location.href = '/'
     }).catch((error) => {
       const errorCode = error.code;
       const credential = GoogleAuthProvider.credentialFromError(error);
