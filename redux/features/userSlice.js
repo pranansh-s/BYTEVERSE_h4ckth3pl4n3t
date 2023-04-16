@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { userData: [] }
+const initialState = { userData: {} }
 
 const userSlice = createSlice({
     name: 'user',
@@ -11,10 +11,6 @@ const userSlice = createSlice({
         }
     }
 });
-
-export const userSetAsync = (data) => async (dispatch) => {
-    dispatch(userSet("SAD"));
-};
 
 export const { userSet } = userSlice.actions;
 export default userSlice.reducer;

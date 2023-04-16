@@ -3,9 +3,9 @@ import Card from "./Card";
 
 const DayRow = ({day}) => {
   const [rowCards, setRowCards] = useState([
-    { title: "Computer Class", time: "4:30pm - 5:30pm", note: "lorem ipsum wowie im a barbie girl in a barbie world", location: "https://google.com", color: "#d70707" },
-    { title: "Computer Class", time: "4:30pm - 5:30pm", note: null, location: "https://google.com", color: "#0718a6" },
-    { title: "Computer Class", time: "4:30pm - 5:30pm", note: "lorem ipsum wowie im a barbie girl in a barbie world", location: null, color: "#41a607" }
+    { title: "Computer Class", time: "4:30pm - 5:30pm", note: "lorem ipsum wowie im a barbie girl in a barbie world", color: "#d70707" },
+    { title: "Computer Class", time: "4:30pm - 5:30pm", note: null, color: "#0718a6" },
+    { title: "Computer Class", time: "4:30pm - 5:30pm", note: "lorem ipsum wowie im a barbie girl in a barbie world", color: "#41a607" }
   ]);
   return (
     <div className="flex items-center m-[1.1vh] relative">

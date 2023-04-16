@@ -1,5 +1,4 @@
 import Image from "next/image";
-import locationLogo from "../public/location.svg";
 import homeLogo from "../public/home.svg";
 import dropDownLogo from "../public/dropDown.svg";
 import arrowRightLogo from "../public/arrow-right.svg";
@@ -8,12 +7,14 @@ import pfp from "../public/pfp.jpeg";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [showGroups, setShowGroups] = useState(false);
   const [showClassrooms, setShowClassrooms] = useState(false);
   const [navClose, setNavClose] = useState(false);
-  const [username, setUserName] = useState("Username");
+
+  const userData = useSelector((state) => state.user.userData)[0];
 
   useEffect(() => {
     if(navClose) {
@@ -26,11 +27,11 @@ const Navbar = () => {
         <div className="flex mb-16 space-x-3">
             <Image src={pfp} width={60} height={60} alt="pfp" className="rounded-full"/>
             <div className={`flex flex-col justify-center ${navClose ? 'opacity-0' : 'opacity-100'} transition-all duration-300`}>
-                <h3 className="font-monteserrat font-semibold text-[#21118e]">{username}</h3>
+                <h3 className="font-monteserrat font-semibold text-[#21118e] whitespace-nowrap text-ellipsis w-24 overflow-hidden">{userData ? userData.name : "User"}</h3>
                 <Link href="/profile" className="font-hindRegular text-xs text-[#8271ee]">Edit Profile</Link>
             </div>
         </div>
-        <Link href="" className={`button bg-[#8371f0] my-2 [box-shadow:0_5px_0_0_#3319d1,0_10px_0_0_#3319d122] border-[#8371f0]/80 flex justify-center ${!navClose && 'space-x-3'} items-center`}>
+        <Link href="/" className={`button bg-[#8371f0] my-2 [box-shadow:0_5px_0_0_#3319d1,0_10px_0_0_#3319d122] border-[#8371f0]/80 flex justify-center ${!navClose && 'space-x-3'} items-center`}>
             <h4 className={`${navClose ? 'w-0' : 'w-max'} overflow-hidden`}>Home</h4>
             <Image src={homeLogo} width={20} height={20} />
         </Link>
@@ -47,14 +48,9 @@ const Navbar = () => {
             <Image src={qrLogo} width={20} height={20} />
         </Link>
         <div className={`h-0 w-full outline outline-[#dad5fa] absolute left-0 ${navClose ? 'bottom-36' : 'bottom-20'}`}/>
-        <div className={`${navClose ? 'flex-col space-y-3' : 'flex-row space-y-0'} flex mt-auto justify-between`}>
-            <Link href="maps" className={`button bg-[#8371f0] [box-shadow:0_5px_0_0_#3319d1,0_10px_0_0_#3319d122] border-[#8371f0]/80 ${navClose ? 'w-full rounded-full' : ' w-[47%]'} flex justify-center`}>
-                <Image src={locationLogo} width={20} height={20}/>
-            </Link>
-            <button onClick={() => setNavClose(!navClose)} className={`flex items-center h-12 justify-center border-2 ${navClose ? 'w-full rounded-full' : ' w-[47%] rounded-lg'} border-white`}>
-                <Image src={arrowRightLogo} width={25} height={25} className={`${!navClose ? 'rotate-180' : 'rotate-0'} transition-all duration-300`}/>
-            </button>
-        </div>
+        <button onClick={() => setNavClose(!navClose)} className={`flex items-center h-12 justify-center border-2 ${navClose ? 'rounded-full' : 'rounded-lg'} w-full mt-auto border-white`}>
+            <Image src={arrowRightLogo} width={25} height={25} className={`${!navClose ? 'rotate-180' : 'rotate-0'} transition-all duration-300`}/>
+        </button>
     </div>
   )
 }
