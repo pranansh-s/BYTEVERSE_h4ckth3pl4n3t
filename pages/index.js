@@ -3,12 +3,11 @@ import Settings from "@/components/Settings";
 import Navbar from "@/components/Navbar";
 
 import { useDispatch } from "react-redux";
-import useAuth from "@/utils/useAuth";
 import { useEffect } from "react";
+import useAuth from "@/utils/useAuth";
 
 import getSpecificDoc from "../utils/getDocument";
 import { userSet } from "@/redux/features/userSlice";
-import { useRouter } from "next/router";
 
 export default function Home() {
   const userData = useAuth();

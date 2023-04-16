@@ -9,7 +9,7 @@ import { signOutHandle } from "./login";
 import { useSelector } from "react-redux";
 import useAuth from "@/utils/useAuth";
 
-const profile = () => {
+const Profile = () => {
   const userData = useSelector((state) => state.user.userData)[0];
   const userInfo = useAuth();
 
@@ -64,4 +64,4 @@ const profile = () => {
   )
 }
 
-export default profile;
+export default Profile;
